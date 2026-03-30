@@ -29,6 +29,7 @@ def search_shorts(topic, max_results=50):
     )
     stats_response = stats_request.execute()
     stats_dict = {item['id']: item['statistics'] for item in stats_response['items']}
+
     
     videos = []
     for item in response['items']:
