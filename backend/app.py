@@ -25,7 +25,6 @@ def generate():
     df = cluster_videos(df)
     insights = get_viral_insights(df)
     script = generate_script(topic, insights)
-    print("SCRIPT OUTPUT:", repr(script))
     clean_script = script.strip().replace('```json', '').replace('```', '').strip()
     script_data = json.loads(clean_script)
     save_script(
@@ -49,7 +48,5 @@ def insights():
     return jsonify(insights_json)
 
     
-
-
 if __name__ == '__main__':
     app.run(debug=True)
