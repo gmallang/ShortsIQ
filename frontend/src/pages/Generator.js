@@ -10,7 +10,7 @@ function Generator() {
     const handleGenerate = async () => {
 
         setLoading(true)
-        const response = await axios.post('http://localhost:5000/api/generate', { topic })
+        const response = await axios.post('https://shortsiq-backend.onrender.com/api/generate', { topic })
         setScript(response.data)
         setLoading(false)
     }

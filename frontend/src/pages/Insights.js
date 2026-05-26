@@ -8,7 +8,7 @@ function Insights() {
 
   const handleAnalyze = async () => {
     setLoading(true)
-    const response = await axios.get(`http://localhost:5000/api/insights?topic=${topic}`)
+    const response = await axios.get(`https://shortsiq-backend.onrender.com/api/insights?topic=${topic}`)
     setInsights(response.data)
     setLoading(false)
   }

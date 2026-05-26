@@ -5,7 +5,7 @@ function History() {
   const [scripts, setScripts] = useState([])
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/history')
+    axios.get('https://shortsiq-backend.onrender.com/api/history')
       .then(response => setScripts(response.data))
   }, [])
 
